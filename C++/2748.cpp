@@ -32,9 +32,9 @@ long long fibo(int n)
 }
 
 int main() {
-    int N;
-    cin >> N;
-    cout << fibo(N);
+    int n;
+    cin >> n;
+    cout << fibo(n);
 
     return 0;
 } 
