@@ -18,12 +18,14 @@
 using namespace std;
 
 int main() {
-    int mon[13] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
+    // 2009년 1월 1일은 목요일
+    int mon[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
     int d, m;
     char w[7][20] = { "Wednesday", "Thursday", "Friday", "Saturday", "Sunday","Monday", "Tuesday" };
 
+    // M월 D일
     scanf("%d %d", &m, &d);
-    for (int i = 1; i < d; i++) {
+    for (int i = 0; i < d - 1; i++) {
         m += mon[i];
     }
     printf("%s", w[m % 7]);
