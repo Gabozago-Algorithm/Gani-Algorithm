@@ -37,6 +37,9 @@ back: 큐의 가장 뒤에 있는 정수를 출력한다.
 using namespace std;
 
 int main() {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	queue<int> Q;
 	int N;
 
