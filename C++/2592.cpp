@@ -35,7 +35,7 @@
 using namespace std;
 
 int main() {
-	int arr[1001];
+	int arr[1001] = {0, };
 	int sum = 0;
 	pair<int, int> res;
 
