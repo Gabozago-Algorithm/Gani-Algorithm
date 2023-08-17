@@ -36,27 +36,26 @@ int main() {
 	cin >> k;
 
 	int arr[51];
-	int max = 0, min = 100, diff = 0;
 	for (int i = 1; i <= k; i++) {
 		int x;
 		// 각 반의 학생 수
 		cin >> x;
 
-		for (int i = 0; i < x; i++) {
-			cin >> arr[i];
+		for (int j = 0; j < x; j++) {
+			cin >> arr[j];
 		}
 
 		// 내림차순
 		sort(arr, arr + x, greater<int>());
 
-		cout << "Class " << k << endl;
+		cout << "Class " << i << endl;
 		cout << "Max " << arr[0] << ", ";
 		cout << "Min " << arr[x - 1] << ", ";
 
 		int gap, largest = 0;
 		// 성적을 내림차순으로 정렬했을 때 가장 큰 인접한 점수 차이
-		for (int i = 1; i < x; i++) {
-			gap = arr[i - 1] - arr[i];
+		for (int j = 1; j < x; j++) {
+			gap = arr[j - 1] - arr[j];
 			if (largest < gap)
 				largest = gap;
 		}
